@@ -1,14 +1,15 @@
 import "./App.css";
+import React from "react";
+import TopPage from "./components/Top";
 
-function App() {
+const StartButton: React.FC = () => {
+  const handleStartClick = () => {
+    console.log("Start button clicked!");
+  };
   return (
-    <>
-      <h1 className="text-5xl font-bold underline text-blue-200">
-        Hello World!
-      </h1>
-      <div></div>
-    </>
+    <div>
+      <TopPage onStartClick={handleStartClick} />
+    </div>
   );
-}
-
-export default App;
+};
+export default StartButton;
