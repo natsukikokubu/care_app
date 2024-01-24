@@ -1,15 +1,13 @@
 import React from "react";
 
-interface CenteredBoxProps {
+type Props = {
   children: React.ReactNode;
-}
+};
 
-const CenteredBox: React.FC<CenteredBoxProps> = ({ children }) => {
+export const CenteredBox: React.FC<Props> = ({ children }) => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto mt-40">
+    <div className="flex flex-col items-center justify-center mt-40 mx-auto ">
       {children}
     </div>
   );
 };
-
-export default CenteredBox;

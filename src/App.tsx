@@ -1,13 +1,12 @@
-import "./App.css";
 import React from "react";
-import TopPage from "./components/Top";
+import TopPage from "./pages/Top";
 
 const StartButton: React.FC = () => {
   const handleStartClick = () => {
     console.log("Start button clicked!");
   };
   return (
-    <div>
+    <div className="bg-blue-200">
       <TopPage onStartClick={handleStartClick} />
     </div>
   );

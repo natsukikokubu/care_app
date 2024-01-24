@@ -1,11 +1,12 @@
 import React from "react";
-import CenteredBox from "./CenteredBox";
+import { CenteredBox } from "../components/CenteredBox";
+import { Button } from "../components/Button";
 
-interface TopPageProps {
+type Props = {
   onStartClick: () => void;
-}
+};
 
-const TopPage: React.FC<TopPageProps> = ({ onStartClick }) => {
+const TopPage: React.FC<Props> = ({ onStartClick }) => {
   return (
     <CenteredBox>
       <h1 className="text-3xl text-gray-700">Welcome to decision making App</h1>
@@ -15,12 +16,7 @@ const TopPage: React.FC<TopPageProps> = ({ onStartClick }) => {
       <p className="text-lg font-semibold text-blue-500 mt-14">
         Give it a try!
       </p>
-      <button
-        className="text-lg text-white bg-blue-500 hover:bg-blue-400 rounded px-4 py-2 mt-14"
-        onClick={onStartClick}
-      >
-        Get Started
-      </button>
+      <Button onClick={onStartClick}>Get Started</Button>
     </CenteredBox>
   );
 };
