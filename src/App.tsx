@@ -1,14 +1,17 @@
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+import { TopPage } from "./pages/Top";
+import { Breath } from "./pages/breath";
+import { Heart } from "./pages/heart";
+
+export const App = () => {
   return (
-    <>
-      <h1 className="text-5xl font-bold underline text-blue-200">
-        Hello World!
-      </h1>
-      <div></div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<TopPage />} />
+        <Route path="/breath" element={<Breath />} />
+        <Route path="/heart" element={<Heart />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
-
-export default App;
+};
