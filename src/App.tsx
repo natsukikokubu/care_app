@@ -1,14 +1,17 @@
-import React from "react";
-import TopPage from "./pages/Top";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const StartButton: React.FC = () => {
-  const handleStartClick = () => {
-    console.log("Start button clicked!");
-  };
+import { TopPage } from "./pages/Top";
+import { Breath } from "./pages/breath";
+import { Heart } from "./pages/heart";
+
+export const App = () => {
   return (
-    <div className="bg-blue-200">
-      <TopPage onStartClick={handleStartClick} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<TopPage />} />
+        <Route path="/breath" element={<Breath />} />
+        <Route path="/heart" element={<Heart />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
-export default StartButton;
